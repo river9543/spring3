@@ -1,0 +1,18 @@
+<!-- src/main/resources/templates/form_error.html -->
+<div th:fragment="formErrorsFragment">
+    <div th:if="${#fields.hasErrors('global')}" class="alert alert-danger">
+        <p th:each="err : ${#fields.errors('global')}" th:text="${err}"></p>
+    </div>
+    <div th:if="${#fields.hasErrors('username')}" class="alert alert-danger">
+        <p th:each="err : ${#fields.errors('username')}" th:text="${err}"></p>
+    </div>
+    <div th:if="${#fields.hasErrors('password1')}" class="alert alert-danger">
+        <p th:each="err : ${#fields.errors('password1')}" th:text="${err}"></p>
+    </div>
+    <div th:if="${#fields.hasErrors('password2')}" class="alert alert-danger">
+        <p th:each="err : ${#fields.errors('password2')}" th:text="${err}"></p>
+    </div>
+    <div th:if="${#fields.hasErrors('email')}" class="alert alert-danger">
+        <p th:each="err : ${#fields.errors('email')}" th:text="${err}"></p>
+    </div>
+</div>
